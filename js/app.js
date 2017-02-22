@@ -13,6 +13,7 @@
 	var streak = 0
 	var longestStreak = 0
 	var score = 0
+	var dock
 
 	var getTitle = function (title) {
 
@@ -83,8 +84,11 @@
 				lives--
 
 				if (lives === 0) {
-					$("#score-game-over").text(score)
-					$("#game-over").addClass('show')
+					setTimeout(function (ev) {
+						$("#score-game-over").text(score)
+						$("#game-over").addClass('show')
+						dock.option("disabled", true)
+					}, 1500)
 				}
 
 				if (streak > longestStreak) {
@@ -99,7 +103,7 @@
 		}
 	});
 
-	Sortable.create(byId('dock'), {
+	dock = Sortable.create(byId('dock'), {
 		group: {
 			name: "dock",
 			pull: true,
