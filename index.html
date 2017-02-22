@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<title>What Came First</title>
+
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+	<script src="js/data.js"></script>
+	<link href="styles/app.css" rel="stylesheet" type="text/css"/>
+
+	<script src="https://use.typekit.net/ipi6gmw.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+<body>
+	<img src="./images/logo.svg" id="sm-logo">
+
+	<div id="life-counter">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 39.3 35.6" style="enable-background:new 0 0 39.3 35.6;" xml:space="preserve">
+		<path d="M39.3,9.8c0-5.4-4.5-9.8-9.9-9.8c-4.7,0-8.7,3.3-9.7,7.6c-1-4.4-5-7.6-9.7-7.6C4.5,0,0,4.4,0,9.8
+			C0,23,20.1,35.6,20.1,35.6S39.3,23,39.3,9.8"/>
+		</svg>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 39.3 35.6" style="enable-background:new 0 0 39.3 35.6;" xml:space="preserve">
+		<path d="M39.3,9.8c0-5.4-4.5-9.8-9.9-9.8c-4.7,0-8.7,3.3-9.7,7.6c-1-4.4-5-7.6-9.7-7.6C4.5,0,0,4.4,0,9.8
+			C0,23,20.1,35.6,20.1,35.6S39.3,23,39.3,9.8"/>
+		</svg>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 39.3 35.6" style="enable-background:new 0 0 39.3 35.6;" xml:space="preserve">
+		<path d="M39.3,9.8c0-5.4-4.5-9.8-9.9-9.8c-4.7,0-8.7,3.3-9.7,7.6c-1-4.4-5-7.6-9.7-7.6C4.5,0,0,4.4,0,9.8
+			C0,23,20.1,35.6,20.1,35.6S39.3,23,39.3,9.8"/>
+		</svg>
+	</div>
+
+	<div id="timeline-wrapper">
+		<ul id="timeline">
+			<div id="timeline-line"></div>
+		</ul>
+		<div id="height-helper"></div>
+	</div>
+
+	<div id="dock-wrapper">
+		<ul id="dock">
+
+		</ul>
+	</div>
+
+	<div class="splash show" id="start-screen">
+		<div class="content">
+			<h1>Place the items<br>on the timeline</h1>
+		</div>
+	</div>
+
+	<div class="splash" id="game-over">
+		<div class="content">
+			<h2>Game Over</h2>
+			<div class="score-text">Score: <span id="score-game-over">0</span></div>
+
+			<div id="start-over">Try Again</div>
+		</div>
+	</div>
+
+	<img id="intro-img" src="./images/wcf.svg">
+
+	<script src="js/lodash.min.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/velocity.ui.min.js"></script>
+	<script src="js/Sortable.js"></script>
+	<script src="js/app.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-13023336-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
