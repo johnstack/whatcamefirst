@@ -58,7 +58,7 @@
 		disabled: true,
 		forceFallback: true,
 		onAdd: function (ev) {
-			var dates = $("#timeline").children('li').map(function(el){ return parseInt($(this).data('date'), 10)})
+			var dates = _.compact($("#timeline").children('li').map(function(el){ return parseInt($(this).data('date'), 10)}))
 			var i = 1
 			while (i < dates.length && (!dates[i] || dates[i] >= dates[i-1])) {
 				i++
@@ -77,8 +77,7 @@
 				}
 			}
 			else {
-				$(ev.item).data('date', '0')
-				$(ev.item).append("<div class='incorrect'></div>").velocity({ opacity: [0, 1], scale: [0, 1] }, { delay: 1000, display: 'none' })
+				$(ev.item).data('date', '0').append("<div class='incorrect'></div>").velocity({ opacity: [0, 1], scale: [0, 1] }, { delay: 1000, display: 'none' })
 				$($("#life-counter").children()[3 - lives]).addClass('lost')
 
 				lives--
