@@ -56,6 +56,16 @@ ul {
 	top: calc(50% - 2.5px);
 	display: block;
 	pointer-events: none;
+	left: 0;
+}
+
+li.sortable-chosen.sortable-ghost {
+	background: rgba(0, 0, 0, 0.1) !important;
+	opacity: 1;
+}
+
+li.sortable-chosen.sortable-ghost > * {
+	opacity: 0;
 }
 
 #timeline-line::before {
@@ -103,6 +113,7 @@ ul {
     transform: none;
     top: 0;
     vertical-align: middle;
+    padding: 0 100px;
 }
 
 #height-helper {
